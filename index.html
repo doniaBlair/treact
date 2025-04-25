@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Treact</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
 </head>
 <body>
-    <header>
+    <header id="site-header">
         <div class="container">
-            <nav class="site-nav d-flex">
+            <nav id="site-nav" class="d-flex">
                 <div class="logo">
                     <a href="#">
                         <img src="./assets/treact-logo.svg" alt="Treact logo">
@@ -20,7 +21,7 @@
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Pricing</a></li>
                     <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="#" class="login">Login</a></li>
                     <li><a href="#" class="site-nav__links--btn">Sign Up</a></li>
                 </ul>
             </nav>
@@ -39,7 +40,7 @@
                         </div>
                         <div class="header__customers">
                             <h2 class="heading--small">Our Trusted Customers</h2>
-                            <div class="header__customers--logos d-flex">
+                            <div class="header__customers--logos d-flex flex-wrap">
                                 <img src="./assets/customer-fortune.png" alt="Fortune">
                                 <img src="./assets/customer-the-weather-channel.png" alt="The Weather Channel">
                                 <img src="./assets/customer-fast-company.png" alt="Fast Company">
@@ -48,14 +49,14 @@
                         </div>
                     </div>
                     <div class="header__image">
-                        <img src="./assets/illustration-hero.svg" alt="girl sitting at a computer desk in an office">
+                        <img src="./assets/illustration-hero.svg" alt="illustration of a girl sitting at a computer desk in an office">
                     </div>
                 </div>
             </div>
         </section>
         <section id="features">
             <div class="container">
-                <div class="row flex-column text-center">
+                <div class="row flex-column text--center section__heading">
                     <h2 class="heading--small">Features</h2>
                     <h3 class="heading--large">We have Amazing <span class="text--purple">Service.</span></h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -63,7 +64,7 @@
                 <div class="row features__grid flex-wrap">
                     <div class="feature d-flex">
                         <div class="feature__icon">
-                            <img src="" alt="">
+                            <img src="./assets/icon-shield.svg" alt="shield icon">
                         </div>
                         <div class="feature__content">
                             <h4>Secure</h4>
@@ -72,7 +73,7 @@
                     </div>
                     <div class="feature d-flex">
                         <div class="feature__icon">
-                            <img src="" alt="">
+                            <img src="./assets/icon-support.svg" alt="support icon">
                         </div>
                         <div class="feature__content">
                             <h4>24/7 Support</h4>
@@ -81,7 +82,7 @@
                     </div>
                     <div class="feature d-flex">
                         <div class="feature__icon">
-                            <img src="" alt="">
+                            <img src="./assets/icon-customize.svg" alt="customize icon">
                         </div>
                         <div class="feature__content">
                             <h4>Customizable</h4>
@@ -90,7 +91,7 @@
                     </div>
                     <div class="feature d-flex">
                         <div class="feature__icon">
-                            <img src="" alt="">
+                            <img src="./assets/icon-reliable.svg" alt="reliability icon">
                         </div>
                         <div class="feature__content">
                             <h4>Reliable</h4>
@@ -99,7 +100,7 @@
                     </div>
                     <div class="feature d-flex">
                         <div class="feature__icon">
-                            <img src="" alt="">
+                            <img src="./assets/icon-fast.svg" alt="lightning bolt icon">
                         </div>
                         <div class="feature__content">
                             <h4>Fast</h4>
@@ -108,7 +109,7 @@
                     </div>
                     <div class="feature d-flex">
                         <div class="feature__icon">
-                            <img src="" alt="">
+                            <img src="./assets/icon-easy.svg" alt="simplicity icon">
                         </div>
                         <div class="feature__content">
                             <h4>Easy</h4>
@@ -121,7 +122,7 @@
         <section id="work">
             <div class="container">
                 <div class="row">
-                    <div class="work__content">
+                    <div class="section__heading work__content">
                         <h2 class="heading--small">Quality Work</h2>
                         <h3 class="heading--large">Designed & Developed by <span class="text--purple">Professionals.</span></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -136,7 +137,7 @@
         <section id="steps">
             <div class="container">
                 <div class="row row-reverse">
-                    <div class="steps__content">
+                    <div class="section__heading steps__content">
                         <h2 class="heading--small">Steps</h2>
                         <h3 class="heading--large">Easy to <span class="text--purple">Get Started.</span></h3>
                         <ul class="steps__list">
@@ -172,21 +173,21 @@
         <section id="values">
             <div class="container">
                 <div class="row">
-                    <div class="values__content">
+                    <div class="section__heading values__content">
                         <h2 class="heading--small">Values</h2>
                         <h3 class="heading--large">We Always Abide by Our <span class="text--purple">Principles.</span></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <div class="values__grid">
+                        <div class="values__grid d-flex flex-wrap">
                             <div class="value">
                                 <div class="value__name d-flex">
-                                    <img src="" alt="">
+                                    <span class="icon icon--green"><img src="./assets/icon-money.svg" alt="dollar sign icon"></span>
                                     <h4>Affordable</h4>
                                 </div>
                                 <p class="value__description">We promise to offer you the best rate we can - at par with the industry standard.</p>
                             </div>
                             <div class="value">
                                 <div class="value__name d-flex">
-                                    <img src="" alt="">
+                                    <span class="icon icon--red"><img src="./assets/icon-briefcase.svg" alt="briefcase icon"></span>
                                     <h4>Professionalism</h4>
                                 </div>
                                 <p class="value__description">We assure you that our templates are designed and created by professional designers.</p>
@@ -194,22 +195,220 @@
                         </div>
                         <a href="#" class="btn">Learn More</a>
                     </div>
-                    <div class="work__image">
-                        <img src="./assets/hero-screenshot.png" alt="screenshot of the hero section">
+                    <div class="values__image">
+                        <img src="./assets/illustration-values.svg" alt="screenshot of the hero section">
                     </div>
                 </div>
             </div>
         </section>
-        <section class="pricing">
+        <section id="pricing">
             <div class="container">
-                <div class="row flex-column text-center">
+                <div class="row flex-column text--center section__heading">
                     <h2 class="heading--small">Pricing</h2>
                     <h3 class="heading--large">Reasonable & Flexible <span class="text--purple">Plans.</span></h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
+                <div class="row pricing__tables">
+                    <div class="pricing-table pricing-table--green">
+                        <div class="pricing-table__heading">
+                            <h4>Personal</h4>
+                            <p class="price">
+                                <span class="number">$17.99</span>
+                                <span class="term">Monthly</span>
+                            </p>
+                        </div>
+                        <div class="pricing-table__features">
+                            <h4>For Individuals</h4>
+                            <ul>
+                                <li>30 Templates</li>
+                                <li>7 Landing Pages</li>
+                                <li>12 Internal Pages</li>
+                                <li>Basic Assistance</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-table__button">
+                            <button>Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="pricing-table pricing-table--purple">
+                        <div class="pricing-table__heading">
+                            <h4>Business</h4>
+                            <p class="price">
+                                <span class="number">37.99</span>
+                                <span class="term">Monthly</span>
+                            </p>
+                        </div>
+                        <div class="pricing-table__features">
+                            <h4>For Small Businesses</h4>
+                            <ul>
+                                <li>60 Templates</li>
+                                <li>15 Landing Pages</li>
+                                <li>22 Internal Pages</li>
+                                <li>Priority Assistance</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-table__button">
+                            <button>Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="pricing-table pricing-table--red">
+                        <div class="pricing-table__heading">
+                            <h4>Enterprise</h4>
+                            <p class="price">
+                                <span class="number">$57.99</span>
+                                <span class="term">Monthly</span>
+                            </p>
+                        </div>
+                        <div class="pricing-table__features">
+                            <h4>For Large Companies</h4>
+                            <ul>
+                                <li>90 Templates</li>
+                                <li>27 Landing Pages</li>
+                                <li>37 Internal Pages</li>
+                                <li>Personal Assistance</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-table__button">
+                            <button>Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials">
+            <div class="container">
+                <div class="row row-reverse">
+                    <div class="testimonials__content">
+                        <div class="section__heading">
+                            <h2 class="heading--small">Testimonials</h2>
+                            <h3 class="heading--large">Our Clients <span class="text--purple">Love Us.</span></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam.</p>
+                        </div>
+                        <div class="testimonials__wrapper">
+                            <div class="testimonial">
+                                <div class="testimonial__rating d-flex">
+                                    <img src="./assets/icon-star.svg" alt="">
+                                    <img src="./assets/icon-star.svg" alt="">
+                                    <img src="./assets/icon-star.svg" alt="">
+                                    <img src="./assets/icon-star.svg" alt="">
+                                    <img src="./assets/icon-star.svg" alt="">
+                                </div>
+                                <h4 class="testimonial__title">Amazing User Experience</h4>
+                                <div class="testimonial__text">
+                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                                </div>
+                                <div class="testimonial__author d-flex">
+                                    <img src="" alt="">
+                                    <div class="testimonial__author--info d-flex">
+                                        <h4>Charlotte Hale</h4>
+                                        <p>Director, Delos Inc.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonials__navigation">
+                                <div class="arrow"></div>
+                                <div class="arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonials_image">
+                        <img src="./assets/illustration-testimonials.svg" alt="illustration of a woman and man each holding a string connected to a heart in between them">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="cta-banner">
+            <div class="container">
+                <div class="row">
+                    <h2>Developers all over the world are happily using Treact.</h2>
+                    <div class="cta__buttons">
+                        <button>Get Started</button>
+                        <button>Contact Us</button>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="container">
+            <div class="row footer__navigation">
+                <div class="footer__navigation--menu">
+                    <h2>Main</h2>
+                    <ul>
+                        <li>
+                            <a href="#">Blog</a>
+                            <a href="#">FAQs</a>
+                            <a href="#">Support</a>
+                            <a href="#">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__navigation--menu">
+                    <h2>Product</h2>
+                    <ul>
+                        <li>
+                            <a href="#">Log In</a>
+                            <a href="#">Personal</a>
+                            <a href="#">Business</a>
+                            <a href="#">Team</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__navigation--menu">
+                    <h2>Press</h2>
+                    <ul>
+                        <li>
+                            <a href="#">Logos</a>
+                            <a href="#">Events</a>
+                            <a href="#">Stories</a>
+                            <a href="#">Office</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__navigation--menu">
+                    <h2>Team</h2>
+                    <ul>
+                        <li>
+                            <a href="#">Career</a>
+                            <a href="#">Founders</a>
+                            <a href="#">Culture</a>
+                            <a href="#">Onboarding</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__navigation--menu">
+                    <h2>Legal</h2>
+                    <ul>
+                        <li>
+                            <a href="#">GDPR</a>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms of Service</a>
+                            <a href="#">Disclaimer</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row footer__meta">
+                <div class="footer__meta--logo">
+                    <img src="./assets/treact-logo-white.svg" alt="Treact logo">
+                </div>
+                <div class="footer__meta--legal">
+                    <p>&copy; 2018 Treact Inc. All Rights Reserved.</p>
+                </div>
+                <div class="footer__meta--social">
+                    <a href="#" target="_blank">
+                        <img src="./assets/icon-facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="./assets/icon-twitter.svg" alt="Twitter">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="./assets/icon-youtube.svg" alt="YouTube">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
