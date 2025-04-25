@@ -203,10 +203,12 @@
         </section>
         <section id="pricing">
             <div class="container">
-                <div class="row flex-column text--center section__heading">
-                    <h2 class="heading--small">Pricing</h2>
-                    <h3 class="heading--large">Reasonable & Flexible <span class="text--purple">Plans.</span></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="row">
+                    <div class="section__heading d-flex flex-column text--center">
+                        <h2 class="heading--small">Pricing</h2>
+                        <h3 class="heading--large">Reasonable & Flexible <span class="text--purple">Plans.</span></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
                 </div>
                 <div class="row pricing__tables">
                     <div class="pricing-table pricing-table--green">
@@ -298,20 +300,28 @@
                                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                                 </div>
                                 <div class="testimonial__author d-flex">
-                                    <img src="" alt="">
+                                    <img src="./assets/testimonial-author-portrait.avif" alt="portrait of Charlotte Hale" />
                                     <div class="testimonial__author--info d-flex">
                                         <h4>Charlotte Hale</h4>
                                         <p>Director, Delos Inc.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="testimonials__navigation">
-                                <div class="arrow"></div>
-                                <div class="arrow"></div>
+                            <div class="testimonials__navigation d-flex">
+                                <button class="arrow prev">
+                                    <svg fill="none" stroke="rgb(100,21,255)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24">
+                                        <path d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                                    </svg>
+                                </button>
+                                <button class="arrow next">
+                                    <svg fill="none" stroke="rgb(100,21,255)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24">
+                                        <path d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonials_image">
+                    <div class="testimonials__image">
                         <img src="./assets/illustration-testimonials.svg" alt="illustration of a woman and man each holding a string connected to a heart in between them">
                     </div>
                 </div>
@@ -320,10 +330,12 @@
         <section id="cta-banner">
             <div class="container">
                 <div class="row">
-                    <h2>Developers all over the world are happily using Treact.</h2>
-                    <div class="cta__buttons">
-                        <button>Get Started</button>
-                        <button>Contact Us</button>
+                    <div class="cta-banner__content d-flex">
+                        <h2>Developers all over the world are happily using Treact.</h2>
+                        <div class="cta__buttons d-flex">
+                            <button class="solid">Get Started</button>
+                            <button class="outline">Contact Us</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -335,68 +347,59 @@
                 <div class="footer__navigation--menu">
                     <h2>Main</h2>
                     <ul>
-                        <li>
-                            <a href="#">Blog</a>
-                            <a href="#">FAQs</a>
-                            <a href="#">Support</a>
-                            <a href="#">About Us</a>
-                        </li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">About Us</a></li>
                     </ul>
                 </div>
                 <div class="footer__navigation--menu">
                     <h2>Product</h2>
                     <ul>
-                        <li>
-                            <a href="#">Log In</a>
-                            <a href="#">Personal</a>
-                            <a href="#">Business</a>
-                            <a href="#">Team</a>
-                        </li>
+                        <li><a href="#">Log In</a></li>
+                        <li><a href="#">Personal</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Team</a></li>
                     </ul>
                 </div>
                 <div class="footer__navigation--menu">
                     <h2>Press</h2>
                     <ul>
-                        <li>
-                            <a href="#">Logos</a>
-                            <a href="#">Events</a>
-                            <a href="#">Stories</a>
-                            <a href="#">Office</a>
-                        </li>
+                        <li><a href="#">Logos</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Stories</a></li>
+                        <li><a href="#">Office</a></li>
                     </ul>
                 </div>
                 <div class="footer__navigation--menu">
                     <h2>Team</h2>
                     <ul>
-                        <li>
-                            <a href="#">Career</a>
-                            <a href="#">Founders</a>
-                            <a href="#">Culture</a>
-                            <a href="#">Onboarding</a>
-                        </li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Founders</a></li>
+                        <li><a href="#">Culture</a></li>
+                        <li><a href="#">Onboarding</a></li>
                     </ul>
                 </div>
                 <div class="footer__navigation--menu">
                     <h2>Legal</h2>
                     <ul>
-                        <li>
-                            <a href="#">GDPR</a>
-                            <a href="#">Privacy Policy</a>
-                            <a href="#">Terms of Service</a>
-                            <a href="#">Disclaimer</a>
-                        </li>
+                        <li><a href="#">GDPR</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Disclaimer</a></li>
                     </ul>
                 </div>
             </div>
             <hr>
             <div class="row footer__meta">
-                <div class="footer__meta--logo">
+                <div class="footer__meta--logo d-flex">
                     <img src="./assets/treact-logo-white.svg" alt="Treact logo">
+                    <span>Treact Inc.</span>
                 </div>
                 <div class="footer__meta--legal">
                     <p>&copy; 2018 Treact Inc. All Rights Reserved.</p>
                 </div>
-                <div class="footer__meta--social">
+                <div class="footer__meta--social d-flex">
                     <a href="#" target="_blank">
                         <img src="./assets/icon-facebook.svg" alt="Facebook">
                     </a>
