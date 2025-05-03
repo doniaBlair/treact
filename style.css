@@ -8,6 +8,31 @@
     font-family: 'Inter', system-ui;
     color: #243e63;
 }
+body {
+    scroll-behavior: smooth;
+}
+.site-nav-mobile--open {
+    max-width: 100vw;
+    overflow: hidden;
+}
+body:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+.site-nav-mobile--open:before {
+    opacity: 1;
+    visibility: visible;
+}
 h1 {
     font-size: 48px;
     color: #1a202c;
@@ -54,6 +79,9 @@ a {
     text-decoration: none;
     transition: all 0.3s ease-in-out;
 }
+a[href="javascript:;"] {
+    cursor: not-allowed;
+}
 a:hover {
     color: #6415ff;
 }
@@ -78,6 +106,14 @@ img {
     max-width: 100%;
     height: auto;
 }
+.section__blob {
+    position: absolute;
+}
+@media(max-width: 991px) {
+    body:before {
+        display: block;
+    }
+}
 @media(max-width: 767px) {
     h1 {
         font-size: 36px;
@@ -100,6 +136,7 @@ img {
 * LAYOUT & UTILITIES
 **/
 section {
+    position: relative;
     padding: 96px 0;
 }
 .container {
@@ -204,6 +241,110 @@ section {
 .site-nav__links li a.site-nav__links--btn:hover {
     background: #3c0d99;
 }
+.site-nav__mobile-btn {
+    display: none;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+}
+.site-nav__mobile-btn:hover {
+    background: none;
+}
+.site-nav__mobile-btn svg {
+    transition: stroke 0.3s ease-in-out;
+}
+.site-nav__mobile-btn:hover svg {
+    stroke: #6415ff;
+}
+@media(max-width: 991px) {
+    .site-nav__links {
+        display: none;
+    }
+    .site-nav__mobile-btn {
+        display: block;
+    }
+}
+
+/**
+* SITE NAVIGATION - MOBILE
+**/
+#site-nav-modal {
+    position: fixed;
+    top: 24px;
+    right: 16px;
+    z-index: 5;
+    width: calc(100% - 32px);
+    padding: 32px 32px 40px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    transform: translateX(100vw);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+    display: none;
+}
+.site-nav-mobile__close-btn {
+    position: absolute;
+    top: 24px;
+    right: 18px;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+}
+.site-nav-mobile__close-btn:hover {
+    background: none;
+}
+.site-nav-mobile__close-btn svg {
+    transition: stroke 0.3s ease-in-out;
+}
+.site-nav-mobile__close-btn:hover svg {
+    stroke: #6415ff;
+}
+#site-nav-mobile {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#site-nav-mobile li {
+    list-style: none;
+}
+#site-nav-mobile li + li {
+    margin-top: 16px;
+}
+#site-nav-mobile li a {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #1a202c;
+}
+#site-nav-mobile li a:hover {
+    color: #6415ff;
+}
+#site-nav-mobile .site-nav-mobile__btn {
+    display: inline-block;
+    padding: 10px 32px 12px;
+    border-radius: 500px;
+    background: #6415ff;
+    color: #fff;
+    margin-top: 8px;
+}
+#site-nav-mobile .site-nav-mobile__btn:hover {
+    color: #fff;
+    background: #3c0d99;
+}
+.site-nav-mobile--open #site-nav-modal {
+    transform: translateX(0);
+}
+@media(max-width: 991px) {
+    #site-nav-modal {
+        opacity: 1;
+        visibility: visible;
+        display: block;
+    }
+}
 
 /**
 * HERO
@@ -281,6 +422,15 @@ section {
 #hero .header__customers--logos img {
     max-height: 34px;
     opacity: 0.5;
+}
+#hero .section__blob {
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 256px;
+    height: 256px;
+    transform: translateX(-50%);
+    opacity: 0.05;
 }
 @media(max-width: 1199px) {
     #hero .header__content {
@@ -376,6 +526,15 @@ section {
     line-height: 2;
     color: #7c8ba1;
 }
+#features .section__blob {
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: 256px;
+    height: auto;
+    transform: translateX(35%);
+    opacity: 0.25;
+}
 @media(max-width: 991px) {
     #features .features__grid {
         max-width: 768px;
@@ -425,10 +584,21 @@ section {
     width: 50%;
 }
 #work .work__image {
+    position: relative;
     border: 1px solid #e5e7eb;
     border-radius: 4px;
-    overflow: hidden;
-    padding-right: 56px;
+    background: #fff;
+    /* overflow: hidden; */
+    margin-right: 40px;
+}
+#work .work__image .dot-grid {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    transform: translate(50%, 50%);
+    width: 80px;
+    height: 80px;
 }
 @media(max-width: 1199px) {
     #work .row {
@@ -447,7 +617,16 @@ section {
         text-align: center;
     }
     #work .work__image {
-        padding-right: 0;
+        margin-right: 0;
+        max-width: min(calc(100% - 40px), 512px);
+    }
+}
+@media(max-width: 767px) {
+    #work .work__image {
+        margin-right: 0;
+    }
+    #work .work__image .dot-grid {
+        transform: translate(30%, 30%);
     }
 }
 
@@ -610,6 +789,7 @@ section {
     margin: 0 auto;
 }
 #pricing .pricing__tables {
+    position: relative;
     gap: 32px;
     justify-content: space-between;
     margin-top: 64px;
@@ -618,6 +798,7 @@ section {
     position: relative;
     width: 100%;
     max-width: 384px;
+    background: #fff;
     box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
     border-radius: 8px;
     text-align: center;
@@ -708,6 +889,16 @@ section {
 #pricing .pricing-table--purple .pricing-table__button button {
     background: #f7fafc;
     color: #6415ff;
+}
+#pricing .pricing__tables > img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 256px;
+    height: 256px;
+    transform: translate(-50%, 50%);
+    opacity: 0.25;
 }
 @media(min-width: 992px) and (max-width: 1199px) {
     #pricing .pricing-table__features h4 {
@@ -881,12 +1072,14 @@ section {
 * CTA BANNER
 **/
 #cta-banner .row {
+    position: relative;
     border-radius: 8px;
-    background: #6315ff;
+    background: #6415ff;
     padding: 96px 32px;
     overflow: hidden;
 }
 #cta-banner .cta-banner__content {
+    position: relative;
     align-items: center;
     width: 100%;
     max-width: 1024px;
@@ -927,6 +1120,23 @@ section {
 #cta-banner .cta__buttons button.outline:hover {
     background: #f7fafc;
     color: #6415ff;
+}
+#cta-banner .row > img {
+    position: absolute;
+    z-index: 0;
+    width: 320px;
+    height: 320px;
+    opacity: 0.5;
+}
+#cta-banner .row > img:first-of-type {
+    bottom: 0;
+    left: 0;
+    transform: translate(-80px, 128px);
+}
+#cta-banner .row > img:last-of-type {
+    top: 0;
+    right: 0;
+    transform: translate(80px, -256px);
 }
 @media(max-width: 991px) {
     #cta-banner .cta-banner__content {
@@ -971,9 +1181,14 @@ section {
 * FOOTER
 **/
 footer {
-    background: #6315ff;
+    position: relative;
+    background: #6415ff;
     padding: 96px 0;
     margin-top: 96px;
+    overflow: hidden;
+}
+footer .container {
+    position: relative;
 }
 footer .footer__navigation {
     justify-content: space-between;
@@ -1004,6 +1219,20 @@ footer .footer__navigation--menu li a {
     line-height: 1.5;
     color: #f7fafc;
 }
+footer .footer__navigation--menu li a:after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+footer .footer__navigation--menu li a:hover:after {
+    opacity: 1;
+}
 footer hr {
     width: 100%;
     height: 2px;
@@ -1015,7 +1244,7 @@ footer .footer__meta {
     justify-content: space-between;
     align-items: center;
 }
-footer .footer__meta--logo {
+footer .footer__meta--logo a {
     align-items: center;
 }
 footer .footer__meta--logo img {
@@ -1039,6 +1268,7 @@ footer .footer__meta--social {
     justify-content: flex-end;
 }
 footer .footer__meta--social a {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1055,6 +1285,23 @@ footer .footer__meta--social a:hover {
 }
 footer .footer__meta--social a img {
     height: 16px;
+}
+footer > img {
+    position: absolute;
+    z-index: 0;
+    width: 320px;
+    height: 320px;
+    opacity: 0.5;
+}
+footer > img:first-of-type {
+    top: 0;
+    left: 0;
+    transform: translate(-80px, -128px);
+}
+footer > img:last-of-type {
+    bottom: 0;
+    right: 0;
+    transform: translate(128px, 192px);
 }
 @media(max-width: 767px) {
     footer {

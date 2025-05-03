@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Treact</title>
     <link rel="stylesheet" href="./style.css" type="text/css">
+    <script src="./index.js"></script>
 </head>
 <body>
     <header id="site-header">
@@ -17,14 +18,39 @@
                     </a>
                 </div>
                 <ul class="site-nav__links">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#" class="login">Login</a></li>
-                    <li><a href="#" class="site-nav__links--btn">Sign Up</a></li>
+                    <li><a href="javascript:;">About</a></li>
+                    <li><a href="javascript:;">Blog</a></li>
+                    <li><a href="javascript:;">Pricing</a></li>
+                    <li><a href="javascript:;">Contact Us</a></li>
+                    <li><a href="javascript:;" class="login">Login</a></li>
+                    <li><a href="javascript:;" class="site-nav__links--btn">Sign Up</a></li>
                 </ul>
+                <button class="site-nav__mobile-btn" onclick="openMenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn__menu--svg">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
             </nav>
+            <div id="site-nav-modal">
+                <button class="site-nav-mobile__close-btn" onclick="closeMenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="light___StyledCloseIcon-lj69nl-14 fASujC">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+                <nav id="site-nav-mobile">
+                    <ul>
+                        <li><a href="javascript:;" onclick="closeMenu()">About</a></li>
+                        <li><a href="javascript:;" onclick="closeMenu()">Blog</a></li>
+                        <li><a href="javascript:;" onclick="closeMenu()">Pricing</a></li>
+                        <li><a href="javascript:;" onclick="closeMenu()">Contact Us</a></li>
+                        <li><a href="javascript:;" onclick="closeMenu()">Login</a></li>
+                        <li><a href="javascript:;" class="site-nav-mobile__btn" onclick="closeMenu()">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
     <main>
@@ -52,6 +78,9 @@
                         <img src="./assets/illustration-hero.svg" alt="illustration of a girl sitting at a computer desk in an office">
                     </div>
                 </div>
+            </div>
+            <div class="section__blob">
+                <img src="./assets/blob-hero.svg" alt="">
             </div>
         </section>
         <section id="features">
@@ -118,6 +147,9 @@
                     </div>
                 </div>
             </div>
+            <div class="section__blob">
+                <img src="./assets/blob-features.svg" alt="">
+            </div>
         </section>
         <section id="work">
             <div class="container">
@@ -130,6 +162,7 @@
                     </div>
                     <div class="work__image">
                         <img src="./assets/hero-screenshot.png" alt="screenshot of the hero section">
+                        <img src="./assets/dot-grid-purple.svg" class="dot-grid" alt="">
                     </div>
                 </div>
             </div>
@@ -274,6 +307,7 @@
                             <button>Buy Now</button>
                         </div>
                     </div>
+                    <img src="./assets/blob-pricing.svg" alt="">
                 </div>
             </div>
         </section>
@@ -330,6 +364,8 @@
         <section id="cta-banner">
             <div class="container">
                 <div class="row">
+                    <img src="./assets/circle-purple.svg" alt="">
+                    <img src="./assets/circle-purple.svg" alt="">
                     <div class="cta-banner__content d-flex">
                         <h2>Developers all over the world are happily using Treact.</h2>
                         <div class="cta__buttons d-flex">
@@ -342,6 +378,8 @@
         </section>
     </main>
     <footer>
+        <img src="./assets/circle-purple.svg" alt="">
+        <img src="./assets/circle-purple.svg" alt="">
         <div class="container">
             <div class="row footer__navigation">
                 <div class="footer__navigation--menu">
@@ -392,9 +430,11 @@
             </div>
             <hr>
             <div class="row footer__meta">
-                <div class="footer__meta--logo d-flex">
-                    <img src="./assets/treact-logo-white.svg" alt="Treact logo">
-                    <span>Treact Inc.</span>
+                <div class="footer__meta--logo">
+                    <a href="#" class="d-flex">
+                        <img src="./assets/treact-logo-white.svg" alt="Treact logo">
+                        <span>Treact Inc.</span>
+                    </a>
                 </div>
                 <div class="footer__meta--legal">
                     <p>&copy; 2018 Treact Inc. All Rights Reserved.</p>
