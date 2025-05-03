@@ -80,7 +80,7 @@ a {
     transition: all 0.3s ease-in-out;
 }
 a[href="javascript:;"] {
-    cursor: not-allowed;
+    /* cursor: not-allowed; */
 }
 a:hover {
     color: #6415ff;
