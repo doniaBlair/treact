@@ -275,9 +275,9 @@ section {
 #site-nav-modal {
     position: fixed;
     top: 24px;
-    right: 16px;
+    left: 16px;
     z-index: 5;
-    width: calc(100% - 32px);
+    width: calc(100vw - 32px);
     padding: 32px 32px 40px;
     background: #fff;
     border-radius: 8px;
